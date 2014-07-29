@@ -15,6 +15,5 @@ with Connection(config.AMQP_URL) as conn:
             'datetime': datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
         },
         exchange=common.exchange,
-        routing_key=common.routing_key,
         declare=[common.queue]
     )
